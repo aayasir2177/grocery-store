@@ -45,7 +45,7 @@ const Hero = () => {
           mb={isLargerThanLG ? '0' : '10'}
           onClick={(e) => {
             e.preventDefault();
-            window.location.href='https://blog.appseed.us/chakra-ui-react-coding-landing-page/';
+            window.location.href='#';
             }}
         >
           Explore
@@ -57,7 +57,7 @@ const Hero = () => {
         alignItems="center"
         justifyContent="center"
       >
-        <Img src="https://images.unsplash.com/photo-1628102491629-778571d893a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" alt="Chakra UI" />
+        <Img borderRadius={"md"} src="https://images.unsplash.com/photo-1628102491629-778571d893a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" alt="Chakra UI" />
       </Flex>
     </Flex>
   );

@@ -10,9 +10,11 @@ import {
   MenuButton,
   Button,
   Image,
+  Icon,
 } from "@chakra-ui/react";
 import { FaAlignJustify } from "react-icons/fa";
-import { Icon } from "@chakra-ui/react";
+import { HiShoppingCart } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 const Nav = ({ onOpen, ref }) => {
   const [scroll, setScroll] = useState(false);
@@ -45,54 +47,68 @@ const Nav = ({ onOpen, ref }) => {
         {isLargerThanMD ? (
           <>
             <Menu>
-              <MenuButton
-                as={Button}
-                variant="ghost"
-                colorScheme="green"
-                size="sm"
-              >
-                Home
-              </MenuButton>
-              <MenuButton
-                as={Button}
-                variant="ghost"
-                colorScheme="green"
-                size="sm"
-              >
-                Grocery
-              </MenuButton>
-              <MenuButton
-                as={Button}
-                variant="ghost"
-                colorScheme="green"
-                size="sm"
-              >
-                About
-              </MenuButton>
-              <MenuButton
-                as={Button}
-                variant="ghost"
-                colorScheme="green"
-                size="sm"
-              >
-                Contact
-              </MenuButton>
-              <MenuButton
-                as={Button}
-                variant="outline"
-                colorScheme="green"
-                size="sm"
-              >
-                Sign Up
-              </MenuButton>
-              <MenuButton
-                as={Button}
-                variant="solid"
-                colorScheme="green"
-                size="sm"
-              >
-                Login
-              </MenuButton>
+              <Link to={"/"}>
+                <MenuButton
+                  as={Button}
+                  variant="ghost"
+                  colorScheme="green"
+                  size="sm"
+                >
+                  Home
+                </MenuButton>
+              </Link>
+
+              <Link to={"/about"}>
+                <MenuButton
+                  as={Button}
+                  variant="ghost"
+                  colorScheme="green"
+                  size="sm"
+                >
+                  About
+                </MenuButton>
+              </Link>
+              <Link to={"/contact"}>
+                <MenuButton
+                  as={Button}
+                  variant="ghost"
+                  colorScheme="green"
+                  size="sm"
+                >
+                  Contact
+                </MenuButton>
+              </Link>
+
+              <Link to={"SignUpPage"}>
+                <MenuButton
+                  as={Button}
+                  variant="outline"
+                  colorScheme="green"
+                  size="sm"
+                >
+                  Sign Up
+                </MenuButton>
+              </Link>
+
+              <Link to={"SignInPage"}>
+                <MenuButton
+                  as={Button}
+                  variant="solid"
+                  colorScheme="green"
+                  size="sm"
+                >
+                  Login
+                </MenuButton>
+              </Link>
+
+              <Link to={"CartPage"}>
+                <IconButton
+                  icon={<HiShoppingCart />}
+                  color={"green.400"}
+                  size="lg"
+                  bgColor={"gray.50"}
+                />
+              </Link>
             </Menu>
           </>
         ) : (

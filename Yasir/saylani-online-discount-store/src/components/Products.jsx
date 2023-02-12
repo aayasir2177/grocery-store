@@ -1,10 +1,8 @@
 import React from "react";
 import CardApp from "./CardApp";
-
 import {
   Box,
   Center,
-  Flex,
   Heading,
   VStack,
   Wrap,
@@ -12,25 +10,7 @@ import {
   useMediaQuery,
 } from "@chakra-ui/react";
 
-export default function Products({title}) {
-  const products = [
-    {
-      title: "Mutton",
-      img: "https://unsplash.com/photos/Xedxbjx7MFg/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjc2MTg3ODg4&force=true&w=1920",
-      price: "100 PKR",
-    },
-    {
-      title: "Mutton",
-      img: "https://unsplash.com/photos/Xedxbjx7MFg/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjc2MTg3ODg4&force=true&w=1920",
-      price: "100 PKR",
-    },
-    {
-      title: "Mutton",
-      img: "https://unsplash.com/photos/Xedxbjx7MFg/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjc2MTg3ODg4&force=true&w=1920",
-      price: "100 PKR",
-    },
-  ];
-
+export default function Products({title, products}) {
   const [isLargerThanLG] = useMediaQuery("(min-width: 62em)");
 
   return (
